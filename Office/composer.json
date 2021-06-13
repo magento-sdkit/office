@@ -1,0 +1,25 @@
+{
+    "name": "sdkit/magento-module-office",
+    "description": "N/A",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "magento/framework": "*",
+        "magento/module-theme": "*",
+        "php": "~7.3.0||~7.4.0"
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Sdkit\\Office\\": ""
+        }
+    }
+}
