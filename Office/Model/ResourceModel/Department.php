@@ -9,6 +9,6 @@ class Department extends AbstractDb
     protected function _construct()
     {
         // TODO: Implement _construct() method.
-        $this->_init('sdkit_office_department', 'entity_id');
+        $this->_init('skdit_office_deparment_v1', 'entity_id');
     }
 }

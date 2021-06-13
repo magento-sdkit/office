@@ -505,5 +505,22 @@ class  InstallSchema implements InstallSchemaInterface
             ->setComment('Office Employee Text Attribute Backend Table');
         $setup->getConnection()->createTable($table);
 
+
+
+        $employeeEntityTable = \Sdkit\Office\Model\Employee::ENTITY . '_entity';
+        $departmentEntityTable = 'sdkit_office_department_v1';
+
+
+        $setup->getConnection()
+            ->addForeignKey(
+                $setup->getFkName($employeeEntityTable, 'department_id', $departmentEntityTable, 'entity_id'),
+                $setup->getTable($employeeEntityTable),
+                'department_id',
+                $setup->getTable($departmentEntityTable),
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            );
+        $setup->endSetup();
+
     }
 }
