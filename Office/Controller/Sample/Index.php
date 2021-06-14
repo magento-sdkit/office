@@ -19,9 +19,10 @@ class Index extends Action implements HttpGetActionInterface
     )
     {
 
+
+        parent::__construct($context);
         $this->employeeFactory = $employeeFactory;
         $this->departmentFactory = $departmentFactory;
-        parent::__construct($context);
     }
 
     public function execute( )

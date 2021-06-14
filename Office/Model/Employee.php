@@ -7,8 +7,8 @@ class Employee extends AbstractModel
 {
     const ENTITY = 'sdkit_office_employee';
 
-    protected function _contruct()
+    public function _construct()
     {
-        $this->_init(\Sdkit\Office\Model\ResourceModel\Employee::class );
+        $this->_init('Sdkit\Office\Model\ResourceModel\Employee' );
     }
 }
