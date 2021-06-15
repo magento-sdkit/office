@@ -3,7 +3,7 @@ namespace Sdkit\Office\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
-class DepartmentCollection extends AbstractCollection
+class Collection extends AbstractCollection
 {
     protected function _construct()
     {
