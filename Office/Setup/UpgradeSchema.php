@@ -16,12 +16,12 @@ class UpgradeSchema implements UpgradeSchemaInterface
 
 
         $employeeEntityTable = \Sdkit\Office\Model\Employee::ENTITY . '_entity';
-        $departmentEntityTable = 'sdkit_office_department_v1';
-        $departmentEntityTable1 = 'sdkit_office_deparment_v1';
-        $setup->getConnection()->dropForeignKey(
-            $setup->getTable($employeeEntityTable),
-            $setup->getFkName($employeeEntityTable, 'department_id', $departmentEntityTable, 'entity_id')
-        );
+//        $departmentEntityTable = 'sdkit_office_department_v1';
+//        $departmentEntityTable1 = 'sdkit_office_deparment_v1';
+//        $setup->getConnection()->dropForeignKey(
+//            $setup->getTable($employeeEntityTable),
+//            $setup->getFkName($employeeEntityTable, 'department_id', $departmentEntityTable, 'entity_id')
+//        );
 
 //        $setup->getConnection()
 //            ->addForeignKey(

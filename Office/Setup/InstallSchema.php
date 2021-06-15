@@ -20,7 +20,7 @@ class  InstallSchema implements InstallSchemaInterface
 
 //        $context->getVersion()
         $table = $setup->getConnection()
-            ->newTable($setup->getTable('skdit_office_deparment'.$this->v))
+            ->newTable($setup->getTable('skdit_office_department'.$this->v))
             ->addColumn('entity_id',
             Table::TYPE_INTEGER,
                 null,
