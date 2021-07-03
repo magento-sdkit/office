@@ -1,0 +1,86 @@
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">sdkit_department_listing.sdkit_department_listing_data_source</item>
+            <item name="deps" xsi:type="string">sdkit_department_listing.sdkit_department_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Add New Department</label>
+            </button>
+        </buttons>
+        <spinner>sdkit_department_columns</spinner>
+        <deps>
+            <dep>sdkit_category_sampleui_listingcms.sdkit_catalog_cms_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="sdkit_department_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Sdkit\Office\Ui\DataProvider\DepartmentDataProvider</argument>
+            <argument name="name" xsi:type="string">sdkit_department_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">entity_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+
+    <!--    https://magento.stackexchange.com/questions/162481/default-filtering-in-ui-component-grid -->
+
+    <listingToolbar name="sdkit_sproduct_list_toolbar">
+        <columnsControls name="columns_controls"/>
+        <massaction name="listing_massaction">
+
+        </massaction>
+
+        <filters name="listing_filters">
+<!--            <filterSelect name="store_id" provider="${ $.parentName }">-->
+<!--                <settings>-->
+<!--                    <options class="Sdkit\Catalog\Ui\Component\Listing\Column\Store\Options"/>-->
+<!--                    <caption translate="true">All Store Views</caption>-->
+<!--                    <label translate="true">Store View</label>-->
+<!--                    <dataScope>store_id</dataScope>-->
+<!--                </settings>-->
+<!--            </filterSelect>-->
+
+            <!--            <argument name="data" xsi:type="array">-->
+            <!--                <item name="config" xsi:type="array">-->
+            <!--                    <item name="applied" xsi:type="array">-->
+            <!--                        <item name="status" xsi:type="string">2</item>-->
+            <!--                    </item>-->
+            <!--                </item>-->
+            <!--            </argument>-->
+
+        </filters>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+
+    <columns name="sdkit_department_columns">
+        <selectionsColumn name="ids">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                </item>
+            </argument>
+        </selectionsColumn>
+        <column name="name" sortOrder="30">
+            <settings>
+                <filter>text</filter>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+                <label translate="true">Name</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

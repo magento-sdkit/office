@@ -26,11 +26,17 @@ class Collection extends Action
 
         /*  @var $collection \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection */
         $collection = $this->_objectManager->create('Sdkit\Office\Model\ResourceModel\EmployeeCollection');
-        $collection->addFieldToSelect()
+        $collection->addFieldToSelect(array('salary', 'dob', 'salary'));
 
         foreach($collection as $employee) {
-            print_r($employee->toArray());
+            $arrray_employee[] = $employee->toArray();
         }
-        $this->resultFactory->create(ResultFactory::TYPE_PAGE);
+
+//      $result = $this->resultFactory->create(ResultFactory::TYPE_JSON);
+//      $result->setData($arrray_employee);
+
+        $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
+
+        return $result;
     }
 }

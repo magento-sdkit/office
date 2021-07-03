@@ -1,5 +1,5 @@
 <?php
-namespace Sdkit\Office\Model\ResourceModel;
+namespace Sdkit\Office\Model\ResourceModel\Department;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
