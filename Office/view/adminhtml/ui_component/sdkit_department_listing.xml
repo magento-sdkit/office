@@ -15,7 +15,7 @@
         </buttons>
         <spinner>sdkit_department_columns</spinner>
         <deps>
-            <dep>sdkit_category_sampleui_listingcms.sdkit_catalog_cms_listing_data_source</dep>
+            <dep>sdkit_department_listing.sdkit_department_listing_data_source</dep>
         </deps>
     </settings>
     <dataSource name="sdkit_department_listing_data_source">
@@ -46,22 +46,6 @@
         </massaction>
 
         <filters name="listing_filters">
-<!--            <filterSelect name="store_id" provider="${ $.parentName }">-->
-<!--                <settings>-->
-<!--                    <options class="Sdkit\Catalog\Ui\Component\Listing\Column\Store\Options"/>-->
-<!--                    <caption translate="true">All Store Views</caption>-->
-<!--                    <label translate="true">Store View</label>-->
-<!--                    <dataScope>store_id</dataScope>-->
-<!--                </settings>-->
-<!--            </filterSelect>-->
-
-            <!--            <argument name="data" xsi:type="array">-->
-            <!--                <item name="config" xsi:type="array">-->
-            <!--                    <item name="applied" xsi:type="array">-->
-            <!--                        <item name="status" xsi:type="string">2</item>-->
-            <!--                    </item>-->
-            <!--                </item>-->
-            <!--            </argument>-->
 
         </filters>
         <paging name="listing_paging"/>

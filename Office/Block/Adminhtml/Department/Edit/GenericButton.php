@@ -1,15 +1,6 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
 namespace Sdkit\Office\Block\Adminhtml\Department\Edit;
 
-
-/**
- * Class GenericButton
- * @package Magento\Customer\Block\Adminhtml\Edit
- */
 class GenericButton
 {
     /**
@@ -30,14 +21,13 @@ class GenericButton
      * Constructor
      *
      * @param \Magento\Backend\Block\Widget\Context $context
-     * @param \Magento\Framework\Registry $registry
+     * @
      */
     public function __construct(
-        \Magento\Backend\Block\Widget\Context $context,
-        \Magento\Framework\Registry $registry
+        \Magento\Backend\Block\Widget\Context $context
     ) {
         $this->urlBuilder = $context->getUrlBuilder();
-        $this->registry = $registry;
+
     }
 
     /**

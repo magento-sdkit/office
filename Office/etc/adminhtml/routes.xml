@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
         <route id="sdkit_office" frontName="sdkitoffice">
-            <module name="Sdkit_Office" before="Magento_Backend" />
+            <module name="Sdkit_Office" after="Magento_Backend" />
         </route>
     </router>
 </config>
