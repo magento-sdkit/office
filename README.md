@@ -1,7 +1,7 @@
 # starterkit
 
 
-This repo is use for learning purpose. Just clone to your repo and keep it in your repo if you want.
+This repo is used for learning purpose. Just clone to your repo and keep it in your repo if you want.
 
 Howto start. 
 
