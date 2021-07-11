@@ -1,8 +1,11 @@
 # starterkit
 
-Howto start 
 
-In app/code folder
-Using 
+This repo is use for learning purpose. Just clone to your repo and keep it in your repo if you want.
 
-git clone https://github.com/sdkit-magento/starterkit Sdkit
+Howto start. 
+
+Go to folder app/code 
+Using : git clone https://github.com/sdkit-magento/starterkit Sdkit
+
+Do customize and make pull request.
