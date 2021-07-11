@@ -11,4 +11,6 @@ class Department extends AbstractDb
         // TODO: Implement _construct() method.
         $this->_init('skdit_office_department_v1', 'entity_id');
     }
+
+
 }

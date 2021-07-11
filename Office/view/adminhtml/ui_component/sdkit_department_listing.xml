@@ -41,8 +41,19 @@
 
     <listingToolbar name="sdkit_sproduct_list_toolbar">
         <columnsControls name="columns_controls"/>
-        <massaction name="listing_massaction">
 
+        <massaction name="listing_massaction">
+            <action name="delete">
+                <settings>
+                    <confirm>
+                        <message translate="true">Are you sure you want to delete the selected departments ?</message>
+                        <title translate="true">Delete items</title>
+                    </confirm>
+                    <url path="sdkitoffice/department/massDelete" />
+                    <type>delete</type>
+                    <label translate="true">Delete</label>
+                </settings>
+            </action>
         </massaction>
 
         <filters name="listing_filters">
@@ -59,6 +70,13 @@
                 </item>
             </argument>
         </selectionsColumn>
+        <column name="entity_id" sortOrder="20">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
         <column name="name" sortOrder="30">
             <settings>
                 <filter>text</filter>
@@ -66,5 +84,10 @@
                 <label translate="true">Name</label>
             </settings>
         </column>
+        <actionsColumn name="actions" class="Sdkit\Office\Ui\Component\Listing\Column\Actions">
+            <settings>
+                <indexField>entity_id</indexField>
+            </settings>
+        </actionsColumn>
     </columns>
 </listing>

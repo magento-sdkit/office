@@ -1,29 +1,31 @@
 <?php
 namespace Sdkit\Office\Controller\Adminhtml\Department;
 
-
 use Magento\Backend\App\Action;
-use Magento\Backend\Model\View\Result\RedirectFactory;
+use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 
-class NewAction extends Action
+class Edit extends Action implements HttpGetActionInterface
 {
     public function __construct(Action\Context $context,
                                 ResultFactory $resultFactory
-                                ,\Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
     )
     {
         parent::__construct($context);
         $this->resultFactory = $resultFactory;
-        $this->resultForwardFactory = $resultForwardFactory;
     }
 
     public function execute()
     {
+//        $id = $this->getRequest()->getParam("id");
+//        $model = $this->_objectManager->create('Sdkit\Office\Model\Department');
+//
+//        if($id) {
+//            $department = $model->load($id);
+//        }
         // TODO: Implement execute() method.
-//        $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-        $result = $this->resultForwardFactory->create();
-        $result->forward("edit");
+        $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         return $result;
     }
+
 }

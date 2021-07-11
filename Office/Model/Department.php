@@ -11,4 +11,5 @@ class Department extends AbstractModel
     {
         $this->_init('Sdkit\Office\Model\ResourceModel\Department');
     }
+
 }

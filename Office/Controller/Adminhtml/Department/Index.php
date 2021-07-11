@@ -1,7 +1,6 @@
 <?php
 namespace Sdkit\Office\Controller\Adminhtml\Department;
 
-
 use Magento\Backend\App\Action;
 use Magento\Framework\Controller\ResultFactory;
 
@@ -19,7 +18,6 @@ class Index extends Action
     {
         // TODO: Implement execute() method.
         $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-
         return $result;
     }
 }
