@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sdkit_Office::menu"
+             title="SDKIT Office" module="Sdkit_Office"
+             sortOrder="12"
+             resource="Sdkit_Office::catalog"
+        />
+        <add id="Sdkit_Office::department" title="Department" module="Sdkit_Office"
+             sortOrder="40" action="sdkitoffice/department" resource="Sdkit_Office::department" parent="Sdkit_Office::menu" />
+
+        <add id="Sdkit_Office::employee" title="Employee" module="Sdkit_Office"
+             sortOrder="40" action="sdkitoffice/employee" resource="Sdkit_Office::department" parent="Sdkit_Office::menu" />
+
+    </menu>
+</config>
