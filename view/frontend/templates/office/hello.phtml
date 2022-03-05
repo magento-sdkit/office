@@ -1,7 +1,123 @@
 <?php /* @var $block Sdkit\Office\Block\Hello */ ?>
 <h1>Hello</h1>
 <p><?php echo $block->helloPublic() ?></p>
-<div data-mage-init='{"SdkitOffice":{"myVar1": "myValue1", "myVar2": "myValue2"}}'>Sdkit</div>
+<div class="block-sample">
+    <div data-mage-init='{"SdkitOffice":{"myVar1": "myValue1", "myVar2": "myValue2"}}'>
+        <div>
+            His name is <span></span>
+            He is <span></span> years old
+        </div>
+    </div>
+</div>
 
 <p><?php //echo $block->helloProtected() ?></p>
 <p><?php //echo $block->helloPrivate() ?></p>
+
+
+<div class="alert-modal-content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+
+
+<div class="block-sample">
+    <div data-bind="scope: 'koexample'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+</div>
+
+<div class="block-sample">
+    <div data-bind="scope: 'koexample'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+</div>
+
+
+<div class="block-sample">
+    <div data-bind="scope: 'koexample1'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+</div>
+
+<div class="block-sample">
+    <div data-bind="scope: 'koexample2'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+</div>
+
+<div class="block-sample">
+    <div data-bind="html: 'Knockout html bind sample'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+</div>
+<div class="block-sample">
+    <div id="sample-ajax"> Click  here to get event </div>
+</div>
+<style>
+.block-sample {
+    margin: 15px 15px;
+}
+</style>
+<script>
+    require([
+        'jquery',
+        'Magento_Ui/js/modal/alert'
+    ], function ($, alert) {
+        'use strict';
+        // alert({
+        //     title: 'Alert Title',
+        //     content: $('.alert-modal-content'),
+        //     modalClass: 'alert',
+        //     actions: {
+        //         always: function() {
+        //             // do something when the modal is closed
+        //         }
+        //     },
+        //     buttons: [{
+        //         text: $.mage.__('Accept'),
+        //         class: 'action primary accept',
+        //         /**
+        //          * Click handler.
+        //          */
+        //         click: function () {
+        //             this.closeModal(true);
+        //         }
+        //     }, {
+        //         text: $.mage.__('New Action'),
+        //         class: 'action',
+        //         /**
+        //          * Click handler.
+        //          */
+        //         click: function () {
+        //             // New action
+        //         }
+        //     }]
+        // });
+    });
+</script>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "koexample": {
+                    "component": "Sdkit_Office/js/koexample",
+                    "template" : "Sdkit_Office/example",
+                    "shouldShowMessage11": "abcd"
+                },
+                "koexample1": {
+                    "component": "Sdkit_Office/js/koexample1",
+                    "template" : "Sdkit_Office/example1"
+                },
+                "koexample2": {
+                    "component": "Sdkit_Office/js/koexample1",
+                    "template" : "Sdkit_Office/example2"
+                }
+            }
+        }
+    },
+    "#sample-ajax":
+    {
+        "Sdkit_Office/js/office": { "triggerEvent": "mouseover", "abc": "def"}
+    }
+}
+</script>

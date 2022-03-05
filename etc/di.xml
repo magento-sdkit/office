@@ -16,6 +16,10 @@
         </arguments>
     </type>
 
+    <type name="Magento\Catalog\Controller\Category\View" >
+        <plugin name="Sdkit_modify_catalog_category_view" type="Sdkit\Office\Plugin\CatalogView" disabled="false"/>
+    </type>
+
     <virtualType name="SdkitOfficeDepartmentCollection" type="Sdkit\Office\Ui\DataProvider\Department\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">skdit_office_department_v1</argument>
